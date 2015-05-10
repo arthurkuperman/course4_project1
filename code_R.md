@@ -1,4 +1,4 @@
-# PLOT 1
+## PLOT 1
 
 loading <- file("household_power_consumption.txt")
 plot <- read.table(text = grep("^[1,2]/2/2007", readLines(loading), value = TRUE), col.names = c("Date", "Time", "Global_active_power", "Global_reactive_power", "Voltage", "Global_intensity", "Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), sep = ";", header = TRUE)
@@ -9,7 +9,7 @@ hist(plot$Global_active_power, col = "red", main = paste("Global Active Power"),
 
 
 
-#PLOT 2
+##PLOT 2
 
 ## data set
 data_set <- read.csv("household_power_consumption.txt", header = T, sep = ';', 
@@ -30,7 +30,7 @@ plot(data$Global_active_power ~ data$Datetime, type = "l",
      ylab = "Global Active Power (kilowatts)", xlab = "")
 
 
-# PLOT 3
+## PLOT 3
 
 
 with(data, {
@@ -44,7 +44,7 @@ legend("topright", col = c("black", "red", "blue"), lty = 1, lwd = 2,
 
 
 
-# PLOT 4
+## PLOT 4
 
 
 par(mfrow = c(2,2), mar = c(4,4,2,1), oma = c(0,0,2,0))
